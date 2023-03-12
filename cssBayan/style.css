@@ -33,11 +33,19 @@ body {
     display: block;
     cursor: pointer;
     font-size: 1.5em;
-}
 
+}
 .text-img1{
     display: none;
 }
+
 .text-img {
     display: none;
 }
+.text-input:checked ~ .text-img {
+    display: block;
+}
+.text-input:checked ~ .text-img1 {
+    display: block;
+}
+
