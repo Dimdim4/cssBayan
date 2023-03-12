@@ -3,6 +3,7 @@ body {
     font-size: 1em = 10px;
     line-height: 1.5;
     background-color: antiquewhite;
+
 }
 *,
 *::before,
@@ -12,7 +13,10 @@ body {
 
 .wrapper {
     max-width: 1920px;
-
+    padding: 50px;
+}
+.head {
+    padding-left: 100px;
 }
 .text {
     margin: 20px 100px;
@@ -33,19 +37,34 @@ body {
     display: block;
     cursor: pointer;
     font-size: 1.5em;
+    color: rgb(110, 159, 233);
 
+}
+.text-title:hover {
+    color: rgb(40, 35, 35);
+    transition: 5s;
 }
 .text-img1{
     display: none;
+    margin: 0 35%;
 }
 
 .text-img {
     display: none;
+    margin: 0 37%;
 }
 .text-input:checked ~ .text-img {
     display: block;
 }
 .text-input:checked ~ .text-img1 {
     display: block;
+}
+@media (max-width: 1920px) {
+    .wrapper {
+        padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
+    .text-title {
+        font-size: calc(30px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));;
+    }
 }
 
